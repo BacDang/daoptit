@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐÀO PTIT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .member {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f9f9f9;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .member:hover {
+            transform: scale(1.05);
+        }
+        .member h2 {
+            color: #333;
+        }
+        .member p {
+            color: #666;
+        }
+        .image-container {
+            display: none;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .image-container img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+    </style>
+    <script>
+        function toggleImages(member) {
+            var imageContainer = member.querySelector(".image-container");
+            if (imageContainer.style.display === "none" || imageContainer.style.display === "") {
+                imageContainer.style.display = "flex";
+            } else {
+                imageContainer.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #2c3e50;">ĐÀO PTIT</h1>
+        
+        <div class="member" onclick="toggleImages(this)">
+            <h2>Nguyễn Quang Hải</h2>
+            <p><strong>số đo:</strong> 96-69-105</p>
+            <p>
+              liên hệ:
+              <a href="https://www.facebook.com/two0206">https://www.facebook.com/two0206</a>
+          </p>
+            <div class="image-container">
+                <img src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/480359542_122213999522080018_972104679281605545_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEWtF3i9ldqHdiPHFqseAuzOlA55dKbXn86UDnl0ptef5L7vWzb-vFpPWqB01HUYPP3pkg1nTUNiQbMDwNeVQ6Z&_nc_ohc=sZsCk6ee0vMQ7kNvgEAWmHh&_nc_oc=Adh7dknCiXtlt6QWJtJe9UEVWZB6opJVBCtT1_QkA-SHgJp2JC_UGuFzcPOHWQ_T2RU&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=Aj2bdDPmGk425D5fXhxPY-U&oh=00_AYDO-hqgdaDNcvHNFhj6iG6H4DTK3FnW0HinqnmHRziYyg&oe=67BCD292" alt="Nguyễn Quang Hải">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
